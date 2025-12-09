@@ -1,0 +1,225 @@
+{
+  "info": {
+    "name": "Beer API - Kata",
+    "description": "Colección completa de endpoints para la API de Cervezas",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Beers",
+      "item": [
+        {
+          "name": "GET All Beers",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/beers",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "beers"]
+            }
+          }
+        },
+        {
+          "name": "GET Beer by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/beer/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "beer", "1"]
+            }
+          }
+        },
+        {
+          "name": "POST Create Beer",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Nueva IPA Artesanal\",\n  \"brewery\": {\n    \"id\": 1\n  },\n  \"category\": {\n    \"id\": 1\n  },\n  \"style\": {\n    \"id\": 1\n  },\n  \"abv\": 6.5,\n  \"ibu\": 55.0,\n  \"srm\": 12.0,\n  \"descript\": \"Una deliciosa IPA con mucho lúpulo y notas cítricas\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/beer",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "beer"]
+            }
+          }
+        },
+        {
+          "name": "PUT Update Beer",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"IPA Actualizada\",\n  \"brewery\": {\n    \"id\": 1\n  },\n  \"category\": {\n    \"id\": 1\n  },\n  \"style\": {\n    \"id\": 1\n  },\n  \"abv\": 7.0,\n  \"ibu\": 60.0,\n  \"srm\": 14.0,\n  \"descript\": \"Descripción actualizada de la cerveza\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/beer/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "beer", "1"]
+            }
+          }
+        },
+        {
+          "name": "PATCH Partial Update Beer",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"IPA Con Nuevo Nombre\",\n  \"abv\": 7.5\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/beer/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "beer", "1"]
+            }
+          }
+        },
+        {
+          "name": "DELETE Beer",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/beer/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "beer", "1"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Breweries",
+      "item": [
+        {
+          "name": "GET All Breweries",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/breweries",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "breweries"]
+            }
+          }
+        },
+        {
+          "name": "GET Brewery by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/brewerie/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "brewerie", "1"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Categories",
+      "item": [
+        {
+          "name": "GET All Categories",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/categories",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "categories"]
+            }
+          }
+        },
+        {
+          "name": "GET Category by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/categorie/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "categorie", "1"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Styles",
+      "item": [
+        {
+          "name": "GET All Styles",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/styles",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "styles"]
+            }
+          }
+        },
+        {
+          "name": "GET Style by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/style/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "style", "1"]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
+

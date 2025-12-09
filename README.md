@@ -62,7 +62,7 @@ Ir más lejos
 - [ ] Implementar la paginación para consultar que devuelven muchos datos 
     por ejemplo con el método HTTP  HEAD.
   [HEAD](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/HEAD)
-- [ ] Integración con [swagger](https://swagger.io/tools/open-source/open-source-integrations/) 
+- [ ] Integración con [swagger](https://swagger.io/tools/open-source/open-source-integrations/)
   del lenguaje escogido.
 - [ ] Modificaciones para poder subir imágenes de las cervezas  
 
