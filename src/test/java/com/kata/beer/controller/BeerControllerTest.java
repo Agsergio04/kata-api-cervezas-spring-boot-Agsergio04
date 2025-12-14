@@ -40,6 +40,7 @@ class BeerControllerTest {
     private Category testCategory;
     private Style testStyle;
 
+
     @BeforeEach
     void setUp() {
         testBrewery = new Brewery();
