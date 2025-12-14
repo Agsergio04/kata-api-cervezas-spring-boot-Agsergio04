@@ -24,9 +24,9 @@ CREATE TABLE `styles` (
   `id` int(11) NOT NULL auto_increment,
   `cat_id` int(11) NOT NULL default '0',
   `style_name` varchar(255) character set utf8 collate utf8_unicode_ci NOT NULL default '',
-  `last_mod` datetime NOT NULL default '0000-00-00 00:00:00',
+  `last_mod` datetime NOT NULL default CURRENT_TIMESTAMP,
   PRIMARY KEY  (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=142 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=142 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `styles`

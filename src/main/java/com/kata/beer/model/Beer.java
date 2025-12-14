@@ -7,6 +7,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import org.hibernate.annotations.NotFound;
+import org.hibernate.annotations.NotFoundAction;
 import java.time.LocalDateTime;
 
 @Entity
@@ -15,6 +18,7 @@ import java.time.LocalDateTime;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Beer {
 
     @Id
@@ -22,7 +26,8 @@ public class Beer {
     private Integer id;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "brewery_id", nullable = false)
+    @JoinColumn(name = "brewery_id", nullable = true)
+    @NotFound(action = NotFoundAction.IGNORE)
     @JsonProperty("brewery")
     private Brewery brewery;
 
@@ -32,12 +37,14 @@ public class Beer {
     private String name;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "cat_id", nullable = false)
+    @JoinColumn(name = "cat_id", nullable = true)
+    @NotFound(action = NotFoundAction.IGNORE)
     @JsonProperty("category")
     private Category category;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "style_id", nullable = false)
+    @JoinColumn(name = "style_id", nullable = true)
+    @NotFound(action = NotFoundAction.IGNORE)
     @JsonProperty("style")
     private Style style;
 
@@ -77,4 +84,3 @@ public class Beer {
         this.lastMod = LocalDateTime.now();
     }
 }
-
